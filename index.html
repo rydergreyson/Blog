@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #b2de8e;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #010101;
+  word-wrap: break-word;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  background: #dea88e;
+  text-shadow: 5px 5px 5px pink;
+  box-shadow: 1px 20px 20px grey;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  font-family: helvetica;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #dad8d6;
+  border: 10px transparent;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: #e1437c;
+   padding: 20px;
+   margin-top: 20px;
+   box-shadow: 1px 20px 20px grey;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffd06e;
+  margin-top: 20px;
+  box-shadow: 1px 20px 20px grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>R. Greyson's Blog</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1>Dec 9, 2021</h1><h2>Changing the colours</h2>
+      <p>OMG! Sooooo many colours! I can't decide how I want this site to look. Should it be professional or a jumble of fun? It's been great to learn the CSS behind <em>decoration</em></p>
+    </div>
+    <div class="card">
+      <h1>Dec 8, 2021</h1><h2>My First Attempt at Website Development</h2>
+      <p>Today I sat down and challenged myself to starting a blog. Sounds simple enough, but I knew that if I was to use a drag-n-drop website builder, I'd spend most of my time changing the theme, getting colours right and waste the afternoon on superflous vanity items.</p>
+      <p>My HTML skills have always been basic, so here was the perfect opportunity to create something to be proud of while becoming more proficient at a valuable skill.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+        <div class="card">
+      <h2>About Me</h2>
+      <p>I love mid 2000's technology, minimalist living and functional exercise.</p>
+      <img src="Images/cat.jpg"
+      <div class="fakeimg">My favourite colour cat.</div><br>
+    <div class="card">
+      <h3>Books I recommend </h3>
+        <ul>How to be a 3% Man</ul>
+        <ul>Move your DNA</ul>
+        <ul>Investment Biker</ul>
+        <ul>Seven Love Languages</ul>
+        <ul>The Longevity Paradox</ul>
+        <ul>Discovering your Soul Signature</ul>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>I might post something cool!</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>You're at the bottom!</h2>
+</div>
+
+</body>
+</html>
