@@ -57,6 +57,8 @@ body {
    padding: 20px;
    margin-top: 20px;
    box-shadow: 1px 20px 20px grey;
+   border-radius: 15px;
+   border: 2px solid white;
 }
 
 /* Clear floats after the columns */
@@ -75,6 +77,38 @@ body {
   box-shadow: 1px 20px 20px grey;
 }
 
+/* Glass button */
+.glass{
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: green; /*for compatibility with older browsers*/
+  background-image: linear-gradient(purple,lightpink);
+
+  /* text styles */
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 100;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px -2px #333;
+  text-shadow: 0px -1px #333;
+}
+
+.glass:after{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 50%;
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.glass:hover{
+  background: linear-gradient(grey,lightblue);
+}
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -92,6 +126,10 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
+     <div class="card">
+      <h1>Dec 11, 2021</h1><h2>Gloss buttons! </h2>
+      <p>These are rad, I went nuts over these as a kid. <br><a href="#" class="glass">Duuuuuuude</a></p>
+    </div>
     <div class="card">
       <h1>Dec 9, 2021</h1><h2>Changing the colours</h2>
       <p>OMG! Sooooo many colours! I can't decide how I want this site to look. Should it be professional or a jumble of fun? It's been great to learn the CSS behind <em>decoration</em></p>
@@ -126,6 +164,7 @@ body {
 
 <div class="footer">
   <h2>You're at the bottom!</h2>
+  <a href="#" class="glass">uwu</a>
 </div>
 
 </body>
